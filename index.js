@@ -12,7 +12,6 @@ const CREDENTIALS = JSON.parse(
   Buffer.from(process.env.GOOGLE_CREDENTIALS_BASE64, 'base64').toString('utf-8')
 );
 
-
 const auth = new google.auth.JWT({
   email: CREDENTIALS.client_email,
   key: CREDENTIALS.private_key,
