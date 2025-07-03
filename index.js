@@ -6,7 +6,12 @@ import { readFileSync } from 'fs';
 
 // 1. Load Google credentials
 
-const CREDENTIALS = JSON.parse(readFileSync('credentials.json', 'utf-8'));
+// const CREDENTIALS = JSON.parse(readFileSync('credentials.json', 'utf-8'));
+
+const CREDENTIALS = JSON.parse(
+  Buffer.from(process.env.GOOGLE_CREDENTIALS_BASE64, 'base64').toString('utf-8')
+);
+
 
 const auth = new google.auth.JWT({
   email: CREDENTIALS.client_email,
