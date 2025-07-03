@@ -44,7 +44,6 @@ create({
 })
   .then(client => {
     console.log('✅ WhatsApp client ready');
-
     client.onMessage(async msg => {
       if (
         msg.isGroupMsg === false &&
