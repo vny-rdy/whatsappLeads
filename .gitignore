@@ -1,3 +1,19 @@
-credentials.json
+# Node modules
 node_modules/
-tokens/
+
+# Auth sessions (Baileys)
+auth_info/
+auth_info.json
+session.data.json
+session-leads.json
+
+# Env and credentials
+.env
+credentials.json
+creds.b64.txt
+
+# OS/IDE/system files
+.DS_Store
+*.log
+.vscode/
+*.zip
